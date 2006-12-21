@@ -10,7 +10,7 @@ occupants, include only a subset of the variables recorded, and
 are restricted in other ways also.}
 \usage{nassCDS}
 \format{
-  A data frame with 26217 observations on the following 9 variables.
+  A data frame with 26217 observations on the following 14 variables.
   \describe{
     \item{\code{dvcat}}{ordered factor with levels (estimated impact
       speeds) \code{1-9km/h}, \code{10-24}, \code{25-39}, \code{40-54},
@@ -26,17 +26,30 @@ are restricted in other ways also.}
     \item{\code{sex}}{a factor with levels \code{f} \code{m}}
     \item{\code{ageOFocc}}{age of occupant in years}
     \item{\code{yearacc}}{year of accident}
+     \item{\code{yearVeh}}{Year of model of vehicle; a numeric vector} 
+     \item{\code{abcat}}{Did one or more (driver or passenger) airbag(s)
+       deploy? This factor has levels \code{deploy} \code{nodeploy}
+       \code{unavail}}
+    \item{\code{occRole}}{a factor with levels \code{driver} \code{pass}}
+    \item{\code{deploy}}{a numeric vector: 0 if an airbag was
+      unavailable or did not deploy; 1 if one or more bags deployed.}
+    \item{\code{injSeverity}}{a numeric vector; 0:none, 1:possible injury,
+      2:no incapacity, 3:incapacity, 4:killed; 5:unknown, 6:prior death}   
   }
   }
 \details{
   Data were collected according to a multi-stage sampling scheme.
   Hence the need to weight observations by the inverse of the
   selection probability, called the national inflation factor
-  (\code{NIF}) in the original data from NASS.  These data include
-  only a subset of the variables from the NASS data.}
+  (\code{national}) in the original data from NASS.  These data include
+  a subset of the variables from the nass9702cor dataset.  Variables
+  that are coded here as factors are coded as numeric values in that
+  dataset. 
 }
+
 \source{
   \url{http://www.stat.uga.edu/~mmeyer/airbags.htm}\\
+  \url{ftp://ftp.nhtsa.dot.gov/nass/}\\
 See also
 \url{http://www.maths.anu.edu.au/~johnm/datasets/airbags}
 }
@@ -44,14 +57,18 @@ See also
   Meyer, M.C. and Finney, T. (2005): \emph{Who wants airbags?}. Chance 
   18:3-16.
 
-  Farmer, C.H. 2005. \emph{Another look at Meyer and Finney's `Who wants
-    airbags?'}
+  Farmer, C.H. 2006. \emph{Another look at Meyer and Finney's `Who wants
+    airbags?'}. Chance 19:15-22.
 
-  \url{http://www.ihs.org}
+  Meyer, M.C. 2006.  emph{Commentary on "Another look at Meyer and
+    Finney's `Who wants airbags?'"}. Chance 19:23-24.
 }
 \examples{
 data(nassCDS)
 xtabs(weight ~ dead + airbag, data=nassCDS)
 xtabs(weight ~ dead + airbag + seatbelt + dvcat, data=nassCDS)
+tab <- xtabs(weight ~ dead + abcat, data=nassCDS,
+             subset=dvcat=="25-39"&frontal==0)[, c(3,1,2)]
+round(tab[2, ]/apply(tab,2,sum)*100,2)
 }
 \keyword{datasets}
