@@ -9,7 +9,8 @@ facilitates a check on how the factor specified as \code{margin}
 may, after accounting for other classifying factors, affect the
 response.  }
 \usage{ excessRisk(form = weight ~ seatbelt + airbag, response
-= "dead", margin = "airbag", data = nassCDS, decpl = 4) }
+= "dead", margin = "airbag", data = nassCDS, decpl = 4,
+printResults=TRUE) }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{form}{\code{form} is a formula in which classifying factors
@@ -25,6 +26,7 @@ response.  }
     factors may be found}
   \item{decpl}{\code{decpl} is the number of decimal places in
     proportions that appear in the output}
+  \item{printResults}{if \code{TRUE}, a tabular summary is printed.}  
 }
 \details{
   The best way to understand what this function does may be to run it
