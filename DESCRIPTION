@@ -1,6 +1,6 @@
 Package: DAAGxtras
-Version: 0.6-5
-Date: 2007-04-23
+Version: 0.6-7
+Date: 2007-09-22
 Title: Data Sets and Functions, supplementary to DAAG
 Author: John Maindonald
 Maintainer: John Maindonald <john.maindonald@anu.edu.au>
@@ -21,4 +21,4 @@ Suggests: DAAG
 ZipData: no
 License: Unlimited use and distribution.
 URL: http://www.maths.anu.edu.au/~johnm
-Packaged: Mon Jul 23 10:54:39 2007; johnm
+Packaged: Sun Sep 23 20:26:04 2007; johnm
