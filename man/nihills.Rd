@@ -12,8 +12,8 @@
   \describe{
     \item{\code{dist}}{distances in miles}
     \item{\code{climb}}{amount of climb in feet}
-    \item{\code{time}}{record time for males}
-    \item{\code{timef}}{record time for females}
+    \item{\code{time}}{record time in hours for males}
+    \item{\code{timef}}{record time in hours for females}
   }
 }
 \details{These data make an interesting comparison with the dataset
