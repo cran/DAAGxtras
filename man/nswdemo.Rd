@@ -1,6 +1,6 @@
 \name{nswdemo}
 \alias{nswdemo}
-\non_function{}
+\docType{data}
 \title{Labour Training Evaluation Data}
 \usage{nsw74demo}
 \description{

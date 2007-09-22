@@ -1,6 +1,6 @@
 \name{cps2}
 \alias{cps2}
-\non_function{}
+\docType{data}
 \title{Labour Training Evaluation Data}
 \usage{cps2}
 \description{

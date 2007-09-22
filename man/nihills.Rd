@@ -1,10 +1,10 @@
 \name{nihills}
 \alias{nihills}
 \docType{data}
-\title{Record times for Northern Ireland mountain running}
-\description{
-  Data are taken from the 2007 calendar for the Northern Ireland
-  Mountain Running Association.
+\title{Record times for Northern Ireland mountain running events}
+\description{ 
+  Data are from the 2007 calendar for the Northern Ireland Mountain
+  Running Association.  
 }
 \usage{data(nihills)}
 \format{

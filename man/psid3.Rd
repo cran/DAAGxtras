@@ -1,6 +1,6 @@
 \name{psid3}
 \alias{psid3}
-\non_function{}
+\docType{data}
 \title{Labour Training Evaluation Data}
 \usage{psid3}
 \description{
