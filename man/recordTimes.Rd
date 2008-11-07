@@ -2,10 +2,8 @@
 \alias{worldRecords}
 \docType{data}
 \title{Record times for track and road races, at August 9th 2006}
-\description{
-
-}
 \usage{data(worldRecords)}
+\description{Record times for track and road races, at August 9th 2006}
 \format{
   A data frame with 40 observations on the following 9 variables.
   \describe{

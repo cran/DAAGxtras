@@ -40,13 +40,14 @@ printResults=TRUE) }
   \item{}{Total tount for level 1 of margin}
   \item{}{Count for level 2 of response \& level 2 of margin}
   \item{}{Total count for level 2 of margin}
-  \item{}{Proportion; divide count for level 1 or margin by total}
-  \item{}{Proportion; divide count for level 2 or margin by total}
-  \item{}{Excess count for level 2 of response in that row; relative to
+  \item{}{Proportion; divide count for level 1 of margin by total}
+  \item{}{Proportion; divide count for level 2 of margin by total}
+  \item{}{Excess count for level 2 of response in row; relative to
     the assumption that, in that row, there is no association between
-    \code{response} and \texttt{margin}.  (For the airbag data; this
-    column gives excess deaths due to airbags, with negative values
-    favouring airbags.)}
+    \code{response} and \texttt{margin}.  This is the observed response
+    (for the default arguments, number of dead) for level 2 (airbag deployed),
+    less the number that would have been expected if the proportion
+    had been that for level 1. (Negative values favor airbags.)}
 }
 \references{See \code{help(nassCDS)}}
 \author{John Maindonald}

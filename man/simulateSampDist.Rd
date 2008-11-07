@@ -39,8 +39,6 @@ List, with elements \code{values}, \code{numINsamp} and \code{FUN}
 \references{Maindonald, J.H. and Braun, W.J. (2nd edn, 2006) \emph{Data
                Analysis and Graphics Using R}, 2nd edn, Section 4.1}
 \author{John Maindonald}
-\note{
-}
 \seealso{\code{help(plotSampDist)}}
 \examples{
 ## By default, sample from normal population

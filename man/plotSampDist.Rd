@@ -23,15 +23,12 @@ plotSampDist(sampvalues, graph = c("density", "qq"), cex = 0.925,
   sample from population}
   \item{\dots}{Other graphics parameters}
 }
-\details{
-}
 \value{
 Plots graph(s), as described above.
 }
 \references{Maindonald, J.H. and Braun, W.J. (2nd edn, 2006) "Data
                Analysis and Graphics Using R", Section 4.1}
 \author{John Maindonald}
-\note{}
 \seealso{See Also \code{help(simulateSampDist)}}
 \examples{
 ## By default, sample from normal population
