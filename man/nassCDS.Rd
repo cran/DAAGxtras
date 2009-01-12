@@ -48,8 +48,10 @@ are restricted in other ways also.}
 }
 
 \source{
-  \url{http://www.stat.uga.edu/~mmeyer/airbags.htm}\\
-  \url{ftp://ftp.nhtsa.dot.gov/nass/}\\
+  \url{http://www.stat.uga.edu/~mmeyer/airbags.htm}
+  
+  \url{ftp://ftp.nhtsa.dot.gov/nass/}
+  
 See also
 \url{http://www.maths.anu.edu.au/~johnm/datasets/airbags}
 }
@@ -57,11 +59,11 @@ See also
   Meyer, M.C. and Finney, T. (2005): \emph{Who wants airbags?}. Chance 
   18:3-16.
 
-  Farmer, C.H. 2006. \emph{Another look at Meyer and Finney's `Who wants
-    airbags?'}. Chance 19:15-22.
+  Farmer, C.H. 2006. \emph{Another look at Meyer and Finney's \sQuote{Who wants
+    airbags?}}. Chance 19:15-22.
 
-  Meyer, M.C. 2006.  emph{Commentary on "Another look at Meyer and
-    Finney's `Who wants airbags?'"}. Chance 19:23-24.
+  Meyer, M.C. 2006.  \emph{Commentary on "Another look at Meyer and
+    Finney's 'Who wants airbags?'"}. Chance 19:23-24.
 }
 \examples{
 data(nassCDS)

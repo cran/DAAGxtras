@@ -39,7 +39,7 @@ See also
   Farmer, C.H. 2006. \emph{Another look at Meyer and Finney's `Who wants
     airbags?'}. Chance 19:15-22.
 
-  Meyer, M.C. 2006.  emph{Commentary on "Another look at Meyer and
+  Meyer, M.C. 2006.  \emph{Commentary on "Another look at Meyer and
     Finney's `Who wants airbags?'"}. Chance 19:23-24.
 }
 \examples{

@@ -661,7 +661,7 @@ Note the vignette \bold{rockArt}.
 }
 \references{
  Meredith Wilson: Rethinking regional analyses of Western Pacific
- rock-art. \\emph{Records of the Australian Museum}, Supplement 29: 173-186.
+ rock-art. \emph{Records of the Australian Museum}, Supplement 29: 173-186.
 }
 \examples{
 data(rockArt)

@@ -10,12 +10,7 @@ Darwin, Melbourne, Perth and Sydney
 \usage{audists}
 \format{
   The format is:
-Class 'dist'  atomic [1:45] 1690 2130 4035 2865 1210 ...
-  ..- attr(*, "Labels")= chr [1:10] "Adelaide" "Alice" "Brisbane" "Broome" ...
-  ..- attr(*, "Size")= int 10
-  ..- attr(*, "call")= language as.dist.default(m = audists)
-  ..- attr(*, "Diag")= logi FALSE
-  ..- attr(*, "Upper")= logi FALSE
+Class 'dist', i.e., a distance matrix.
 }
 \source{
 Australian road map

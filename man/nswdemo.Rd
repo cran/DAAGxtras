@@ -2,7 +2,7 @@
 \alias{nswdemo}
 \docType{data}
 \title{Labour Training Evaluation Data}
-\usage{nsw74demo}
+\usage{data(nswdemo)}
 \description{
 The \code{nswdemo} data frame contains 722 rows and 10 columns.
 These data are pertinent to an investigation of the way that   
@@ -35,7 +35,7 @@ identifying the study in which the subjects were enrolled
   }
 }
 \source{
-  http://www.nber.org/~rdehejia/nswdata.html
+  \url{http://www.nber.org/~rdehejia/nswdata.html}
 }
 \references{
  Dehejia, R.H. and Wahba, S. 1999. Causal effects in

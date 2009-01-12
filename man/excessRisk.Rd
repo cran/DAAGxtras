@@ -44,7 +44,7 @@ printResults=TRUE) }
   \item{}{Proportion; divide count for level 2 of margin by total}
   \item{}{Excess count for level 2 of response in row; relative to
     the assumption that, in that row, there is no association between
-    \code{response} and \texttt{margin}.  This is the observed response
+    \code{response} and \code{margin}.  This is the observed response
     (for the default arguments, number of dead) for level 2 (airbag deployed),
     less the number that would have been expected if the proportion
     had been that for level 1. (Negative values favor airbags.)}
