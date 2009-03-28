@@ -6,7 +6,7 @@
 \description{
 The Southern Oscillation Index (SOI) is the difference in barometric  
 pressure at sea level between Tahiti and Darwin.  Monthly and annual SOI
-data, for the years 1876-2007, are given.
+data, for the years 1876-2008, are given.
 }
 \format{
   This data frame contains the following columns:
@@ -41,6 +41,6 @@ Geophysical Research Letters 23: 3357-3360.
 } 
   \examples{ 
 plot(ts(SOI[, "avsoi"], start=1900),
-     panel=function(y,...)panel.smooth(1900:2007, y,...))
+     panel=function(y,...)panel.smooth(1900:2008, y,...))
 } 
 \keyword{datasets}
