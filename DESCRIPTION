@@ -1,6 +1,6 @@
 Package: DAAGxtras
-Version: 0.7-5
-Date: 2009-03-28
+Version: 0.7-6
+Date: 2009-04-18
 Title: Data Sets and Functions, supplementary to DAAG
 Author: John Maindonald
 Maintainer: John Maindonald <john.maindonald@anu.edu.au>
@@ -9,8 +9,8 @@ Description: various data sets used in additonal exercises for the book
         and Graphics Using R", and for a 'Data Mining' course.  Note
         especially the datasets \code{nassCDS} (airbag and other
         influences on US vehicle accident outcomes: 1997-2002),
-        \code{cricketers} (handedness, British first class cricketers
-        born before 1961 whose handedness was specified),
+        \code{cricketer} (handedness, British first class cricketers
+        born 1840-1960 whose handedness could be determined),
         \code{nswdemo} and related datasets (US Labor Training
         Evaluation Data), \code{rockArt} (multivariate binary data on
         Pacific rock art), \code{hotspots} (ages and distance from
@@ -30,6 +30,6 @@ Suggests: DAAG
 ZipData: no
 License: Unlimited
 URL: http://www.maths.anu.edu.au/~johnm
-Packaged: Sun Mar 29 13:37:04 2009; johnm
+Packaged: 2009-04-19 10:28:37 UTC; johnm
 Repository: CRAN
-Date/Publication: 2009-03-29 14:53:56
+Date/Publication: 2009-04-19 18:06:56
