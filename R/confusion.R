@@ -1,11 +1,11 @@
 confusion <-
-function(actual, predicted, names=NULL, rowcol=c("actual","predicted"),
-           printit=TRUE, prior=NULL){
-    if(is.null(names))names <- levels(actual)
+function(actual, predicted, gpnames=NULL, rowcol=c("actual","predicted"),
+           printit=TRUE, prior=NULL, digits=3){
+    if(is.null(gpnames))gpnames <- levels(actual)
     tab <- table(actual, predicted)
     acctab <- t(apply(tab, 1, function(x)x/sum(x)))
-    dimnames(acctab) <- list(Actual=names,
-                             "Predicted (cv)"=names) 
+    dimnames(acctab) <- list(Actual=gpnames,
+                             "Predicted (cv)"=gpnames) 
     if(is.null(prior)){
       relnum <- table(actual)
       prior <- relnum/sum(relnum)
@@ -13,15 +13,15 @@ function(actual, predicted, names=NULL, rowcol=c("actual","predicted"),
     } else
     {
       acc <- sum(prior*diag(acctab))
-      names(prior) <- names
     }    
-    if(printit)print(round(c("Overall accuracy"=acc, 
-                             "Prior frequency"=prior),4))
-    if(rowcol[1]=="predicted")acctab <- t(acctab)
-    if(printit){
-      cat("\nConfusion matrix", "\n")
-      print(round(acctab,4))
-    }
+    names(prior) <- gpnames
+    if (printit){
+    cat("Overall accuracy =", round(acc, digits), "\n")
+    cat("This assumes the following prior frequencies:", "\n")
+    print(round(prior, digits)) 
+    cat("\nConfusion matrix", "\n")
+    print(round(acctab, digits))
+  }
     invisible(acctab)
   }
 

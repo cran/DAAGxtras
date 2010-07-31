@@ -7,8 +7,8 @@
   Given actual and predicted group assignments, give the confusion matrix
 }
 \usage{
-confusion(actual, predicted, names = NULL, rowcol=c("actual",
-"predicted"), printit = TRUE, prior = NULL)
+confusion(actual, predicted, gpnames = NULL, rowcol=c("actual",
+"predicted"), printit = TRUE, prior = NULL, digits=3)
 }
 \arguments{
   \item{actual}{
@@ -17,7 +17,7 @@ Actual (prior) group assigments
   \item{predicted}{
     Predicted group assigments.
   }
-\item{names}{
+\item{gpnames}{
 Names for groups, if different from \code{levels(actual)}
 }
 \item{rowcol}{For predicted categories to appear as rows,
@@ -29,7 +29,9 @@ Logical. Should results be printed?
   \item{prior}{
     Prior probabilities for groups, if different from the relative group
     frequencies
-}
+  }
+  \item{digits}{Number of decimal digits to display in printed output
+    }
 }
 \details{
   Predicted group assignments should be estimated from cross-validation
@@ -55,13 +57,13 @@ cl <- lda(species ~ length+breadth, data=cuckoos, CV=TRUE)$class
 confusion(cl,cuckoos$species)
 
 ## The function is currently defined as
-function(actual, predicted, names=NULL, rowcol=c("actual","predicted"),
-           printit=TRUE, prior=NULL){
-    if(is.null(names))names <- levels(actual)
+function(actual, predicted, gpnames=NULL, rowcol=c("actual","predicted"),
+           printit=TRUE, prior=NULL, digits=3){
+    if(is.null(gpnames))gpnames <- levels(actual)
     tab <- table(actual, predicted)
     acctab <- t(apply(tab, 1, function(x)x/sum(x)))
-    dimnames(acctab) <- list(Actual=names,
-                             "Predicted (cv)"=names) 
+    dimnames(acctab) <- list(Actual=gpnames,
+                             "Predicted (cv)"=gpnames) 
     if(is.null(prior)){
       relnum <- table(actual)
       prior <- relnum/sum(relnum)
@@ -69,15 +71,15 @@ function(actual, predicted, names=NULL, rowcol=c("actual","predicted"),
     } else
     {
       acc <- sum(prior*diag(acctab))
-      names(prior) <- names
     }    
-    if(printit)print(round(c("Overall accuracy"=acc, 
-                             "Prior frequency"=prior),4))
-    if(rowcol[1]=="predicted")acctab <- t(acctab)
-    if(printit){
-      cat("\nConfusion matrix", "\n")
-      print(round(acctab,4))
-    }
+    names(prior) <- gpnames
+    if (printit){
+    cat("Overall accuracy =", round(acc, digits), "\n")
+    cat("This assumes the following prior frequencies:", "\n")
+    print(round(prior, digits)) 
+    cat("\nConfusion matrix", "\n")
+    print(round(acctab, digits))
+  }
     invisible(acctab)
   }
 }
