@@ -1,6 +1,6 @@
 Package: DAAGxtras
-Version: 0.8-1
-Date: 2010-December-27
+Version: 0.8-2
+Date: 2011-February-9
 Title: Data Sets and Functions, supplementary to DAAG
 Author: John Maindonald
 Maintainer: John Maindonald <john.maindonald@anu.edu.au>
@@ -16,6 +16,6 @@ Suggests: DAAG, MASS, lattice
 ZipData: no
 License: Unlimited
 URL: http://www.maths.anu.edu.au/~johnm
-Packaged: 2010-12-26 21:25:51 UTC; johnm
+Packaged: 2011-02-09 09:22:03 UTC; johnm
 Repository: CRAN
-Date/Publication: 2011-01-03 12:27:28
+Date/Publication: 2011-02-09 10:47:51
