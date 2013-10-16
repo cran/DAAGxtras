@@ -26,8 +26,8 @@ plotSampDist(sampvalues, graph = c("density", "qq"), cex = 0.925,
 \value{
 Plots graph(s), as described above.
 }
-\references{Maindonald, J.H. and Braun, W.J. (2nd edn, 2006)
-  \dQuote{Data Analysis and Graphics Using R}, Section 4.1}
+\references{Maindonald, J.H. and Braun, W.J. (3rd edn, 2010)
+  \dQuote{Data Analysis and Graphics Using R}, Sections 3.3 and 3.4.}
 \author{John Maindonald}
 \seealso{See Also \code{help(simulateSampDist)}}
 \examples{

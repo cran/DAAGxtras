@@ -10,7 +10,7 @@
 }
 \usage{
 compareModels(groups = fgl$type, estprobs = list(lda = NULL, rf = NULL),
-            gpnames = NULL, robust = TRUE, print = TRUE) 
+            gpnames = NULL, robust = TRUE, print = TRUE)
 }
 \arguments{
   \item{groups}{Factor that specifies the groups}
@@ -19,7 +19,7 @@ compareModels(groups = fgl$type, estprobs = list(lda = NULL, rf = NULL),
     matrices that give for each observation (row) estimated
     probabilities of membership for each of the groups (columns).}
     \item{gpnames}{Character: names for groups, if different from
-    \code{levels(groups)}}  
+    \code{levels(groups)}}
   \item{robust}{Logical, \code{TRUE} or \code{FALSE}}
   \item{print}{Logical.  Should results be printed?}
 }
@@ -49,10 +49,16 @@ library(MASS)
 library(DAAG)
 ldahat <- lda(species ~ length+breadth, data=cuckoos, CV=TRUE)$posterior
 qdahat <- qda(species ~ length+breadth, data=cuckoos, CV=TRUE)$posterior
+compareModels(groups=cuckoos$species, estprobs=list(lda=ldahat,
+              qda=qdahat), robust=FALSE)
+rfOUT <- try(require(randomForest, quietly=TRUE))
+rfOUT.log <- is.logical(rfOUT)
+if ((rfOUT.log==TRUE)&(rfOUT==TRUE)){
 rfhat <- predict(randomForest(species ~ length+breadth, data=cuckoos),
                  type="prob")
 compareModels(groups=cuckoos$species, estprobs=list(lda=ldahat,
               qda=qdahat, rf=rfhat), robust=FALSE)
+}
 }
 \keyword{statistics}
 \keyword{multivariate}
